@@ -10,7 +10,7 @@ from tqdm import tqdm
 # Run dqn with Tetris
 def dqn():
     env = Tetris()
-    episodes = 1500
+    episodes = 1400
     max_steps = None
     epsilon_stop_episode = 1500
     mem_size = 20000
