@@ -41,6 +41,12 @@ def dqn():
         done = False
         steps = 0
 
+        if episode % 100 == 0:
+            agent.model.save(
+                f"saved_models/tetris-{episode}", save_format="tf")
+            agent.model.save(
+                f"saved_models/tetris-{episode}", save_format="h5")
+
         if render_every and episode % render_every == 0:
             render = True
         else:
